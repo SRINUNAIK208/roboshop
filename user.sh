@@ -67,7 +67,7 @@ cd /app
 npm install 
 VALIDATE $? "packages"
 
-cp $Script_Dir/user.sh /etc/systemd/system/user.service
+cp $Script_Dir/user.service /etc/systemd/system/user.service
 VALIDATE $? "Created user service"
 
 systemctl daemon-reload
