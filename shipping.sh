@@ -48,6 +48,7 @@ else
    VALIDATE $? "roboshop user created"
 fi
 
+rm -rf /app
 mkdir -p /app 
 
 curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping-v3.zip 
