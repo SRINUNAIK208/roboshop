@@ -62,6 +62,9 @@ VALIDATE $? "maven package"
 mv target/shipping-1.0.jar shipping.jar 
 VALIDATE $? "jat files copied"
 
+cp $Script_Dir/shipping.service /etc/systemd/system/shipping.service
+VALIDATE $? "created shiiping service"
+
 systemctl daemon-reload
 systemctl enable shipping 
 systemctl start shipping
